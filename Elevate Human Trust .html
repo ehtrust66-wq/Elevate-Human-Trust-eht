@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Human Trust | Hope • Compassion • Humanity</title>
+    <!-- Google Fonts for English and Urdu Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0b63a4;
+            --accent-pink: #e02482;
+            --accent-yellow: #f1b319;
+            --text-dark: #2d3748;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .urdu {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            direction: rtl;
+            text-align: right;
+            line-height: 2.2;
+            font-size: 0.95rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--accent-pink);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-donate-nav {
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-yellow));
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(11,99,164,0.05), rgba(224,36,130,0.05));
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-taglines {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .hero-taglines span {
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .hero-subhead {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero .urdu-vision {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px dashed #cbd5e0;
+            text-align: center;
+        }
+
+        /* Section Global Settings */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            background: var(--accent-pink);
+            bottom: 0;
+            left: 20%;
+            border-radius: 2px;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .card ul.en-list li::before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .card ul.ur-list li::before {
+            content: " 🌍 ";
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+        }
+
+        .card-urdu-sep {
+            border-top: 1px solid #edf2f7;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+
+        /* Image Display Layouts */
+        .project-img-wrapper {
+            width: 100%;
+            height: 280px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .outreach-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .outreach-gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .large-collage-box {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .large-collage-box img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Future Projects List */
+        .future-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .future-list li {
+            background: var(--white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-yellow);
+            font-weight: 600;
+        }
+
+        /* Donation Section */
+        .donation-banner {
+            background: linear-gradient(135deg, var(--primary-color), #053b61);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(11,99,164,0.3);
+        }
+
+        .donation-banner h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .donation-banner p {
+            max-width: 600px;
+            margin: 0 auto 15px;
+        }
+
+        .easypaisa-box {
+            display: inline-block;
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 20px 30px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 15px;
+        }
+
+        .easypaisa-box span {
+            display: block;
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .easypaisa-box i {
+            color: #28a745;
+            margin-right: 10px;
+        }
+
+        /* Leadership Section */
+        .leader-card {
+            text-align: center;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .leader-avatar {
+            width: 80px;
+            height: 80px;
+            background: #e2e8f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .leader-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .leader-card .role {
+            color: var(--accent-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .leader-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Final Quote Message */
+        .final-msg {
+            text-align: center;
+            background: var(--white);
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .quote-box {
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--accent-pink);
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        /* Footer Extended Styles */
+        footer {
+            background: #1a202c;
+            color: #a0aec0;
+            padding: 60px 20px 30px;
+            border-top: 4px solid var(--accent-yellow);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3, .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2d3748;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            .donation-banner {
+                padding: 30px 15px;
+            }
+            .easypaisa-box {
+                font-size: 1rem;
+                padding: 15px 20px;
+            }
+            .footer-container {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo-area">
+                <img src="logo.jpeg" alt="Elevate Human Trust Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>Elevate Human Trust</h1>
+                    <p class="urdu">امید • احساس • انسانیت</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">Vision</a></li>
+                <li><a href="#services">Strategic Initiatives</a></li>
+                <li><a href="#projects">Work Portfolio</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#donate" class="btn-donate-nav"><i class="fa-solid fa-heart"></i> Donate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero / Vision Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-taglines">
+                <span>Hope</span>
+                <span>Compassion</span>
+                <span>Humanity</span>
+            </div>
+            <h2>Elevate Human Trust</h2>
+            <p class="hero-subhead">Dedicated to building a compassionate society where no one is left behind.</p>
+            <p class="urdu" style="font-size: 1.2rem; font-weight: bold; color: var(--accent-pink); text-align: center;">امید احساس انسانیت</p>
+            
+            <div class="urdu-vision">
+                <p>Elevate Human Trust is dedicated to building a compassionate society where no one is left behind. We work to identify vulnerable communities and provide both immediate relief and long-term sustainable support.</p>
+                <p class="urdu" style="margin-top: 15px;">Elevate Human Trust ایک ایسا فلاحی ادارہ ہے جس کا مقصد ایک ہمدرد معاشرہ قائم کرنا ہے جہاں کوئی بھی انسان نظر انداز نہ ہو۔ ہم کمزور طبقات کی نشاندہی کر کے فوری امداد اور دیرپا ترقیاتی حل فراہم کرتے ہیں۔</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do / Strategic Initiatives Section -->
+    <section id="services">
+        <div class="section-title">
+            <h2>Strategic Initiatives | ہم کیا کرتے ہیں</h2>
+        </div>
+
+        <div class="grid-3">
+            <!-- 1. Social Welfare -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+                <h3>1. Social Welfare | سماجی فلاح</h3>
+                <ul class="en-list">
+                    <li>Family support programs</li>
+                    <li>Marriage assistance for poor & orphan girls</li>
+                    <li>Monthly ration distribution</li>
+                    <li>Emergency financial help</li>
+                </ul>
+                <div class="card-urdu-sep">
+                    <ul class="urdu ur-list">
+                        <li>مستحق خاندانوں کی مدد</li>
+                        <li>یتیم و غریب بچیوں کی شادی میں معاونت</li>
+                        <li>راشن کی تقسیم</li>
+                        <li>ہنگامی مالی امداد</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Education & Skills -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>2. Education & Skills | تعلیم و مہارت</h3>
+                <ul class="en-list">
+                    <li>Free computer courses</li>
+                    <li>Digital skills training</li>
+                    <li>Freelancing guidance</li>
+                    <li>Youth empowerment programs</li>
+                </ul>
+                <div class="card-urdu-sep">
+                    <ul class="urdu ur-list">
+                        <li>مفت کمپیوٹر کورسز</li>
+                        <li>ڈیجیٹل اسکلز ٹریننگ</li>
+                        <li>فری لانسنگ رہنمائی</li>
+                        <li>نوجوانوں کی تربیت</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Healthcare Support -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                <h3>3. Healthcare Support | صحت کی سہولت</h3>
+                <ul class="en-list">
+                    <li>Free medical camps</li>
+                    <li>Eye & dental checkups</li>
+                    <li>Free medicines distribution</li>
+                    <li>Rural health outreach</li>
+                </ul>
+                <div class="card-urdu-sep">
+                    <ul class="urdu ur-list">
+                        <li>مفت میڈیکل کیمپس</li>
+                        <li>آنکھوں اور دانتوں کا معائنہ</li>
+                        <li>مفت ادویات</li>
+                        <li>دیہی علاقوں میں طبی سہولت</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Clean Water & Infrastructure -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-droplet"></i></div>
+                <h3>4. Clean Water & Infrastructure</h3>
+                <ul class="en-list">
+                    <li>Water filtration systems</li>
+                    <li>Village development support</li>
+                    <li>Clean drinking water projects</li>
+                </ul>
+                <div class="card-urdu-sep">
+                    <h4 class="urdu" style="font-weight:bold; margin-bottom:5px;">صاف پانی و بنیادی سہولیات</h4>
+                    <ul class="urdu ur-list">
+                        <li>صاف پانی کے منصوبے</li>
+                        <li>دیہات کی ترقی</li>
+                        <li>بنیادی سہولیات کی فراہمی</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. Emergency Relief -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                <h3>5. Emergency Relief | ہنگامی امداد</h3>
+                <ul class="en-list">
+                    <li>Flood & disaster relief</li>
+                    <li>Food & shelter support</li>
+                    <li>Emergency response teams</li>
+                </ul>
+                <div class="card-urdu-sep">
+                    <ul class="urdu ur-list">
+                        <li>آفات میں فوری امداد</li>
+                        <li>خوراک اور رہائش کی سہولت</li>
+                        <li>ایمرجنسی ریسپانس ٹیم</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects / Our Work Portfolio Section -->
+    <section id="projects" style="background-color: var(--white); border-radius: 16px; margin-bottom: 60px;">
+        <div class="section-title">
+            <h2>Our Work Portfolio | ہمارے مکمل کیے گئے کام</h2>
+        </div>
+
+        <div class="grid-2">
+            <!-- Project 1: Medical Camp -->
+            <div class="card" style="box-shadow: 0 2px 10px rgba(0,0,0,0.05); background: var(--bg-light);">
+                <div class="project-img-wrapper">
+                    <img src="9.jpeg" alt="Free Medical Camp Checkup">
+                </div>
+                <h3>🏥 Free Medical Camp | مفت میڈیکل کیمپ</h3>
+                <p style="margin-bottom:15px;">A large-scale medical camp was organized in Thatha Mian Lilla, Chiniot where hundreds of patients received free consultation, diagnosis, and medicines.</p>
+                <p class="urdu" style="margin-bottom:20px;">چنیاں کے علاقے تھٹھہ میان لیلا میں بڑا میڈیکل کیمپ منعقد کیا گیا جہاں سینکڑوں مریضوں کو مفت علاج اور ادویات فراہم کی گئیں۔</p>
+                <ul class="en-list">
+                    <li>Doctors consultation</li>
+                    <li>Free medicines</li>
+                    <li>Diagnostic screening</li>
+                    <li>Rural healthcare support</li>
+                </ul>
+            </div>
+
+            <!-- Project 2: Mass Wedding -->
+            <div class="card" style="box-shadow: 0 2px 10px rgba(0,0,0,0.05); background: var(--bg-light);">
+                <div class="project-img-wrapper">
+                    <img src="1.jpeg" alt="Mass Wedding Program">
+                </div>
+                <h3>💍 Mass Wedding Program | اجتماعی شادی پروگرام</h3>
+                <p style="margin-bottom:15px;">We successfully organized a mass wedding ceremony in Paky Maliyan Village, Pindi Bhattian, where multiple deserving couples were supported with complete wedding arrangements, gifts, and logistics.</p>
+                <p class="urdu" style="margin-bottom:20px;">ہم نے پکی ملیاں گاؤں، پنڈی بھٹیاں میں اجتماعی شادی کا کامیاب انعقاد کیا جہاں کئی مستحق جوڑوں کی مکمل شادی کا انتظام کیا گیا۔</p>
+                <ul class="en-list">
+                    <li>Wedding arrangements</li>
+                    <li>Catering & logistics</li>
+                    <li>Bridal gift packages</li>
+                    <li>Full support for orphan bride</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Extra Outreach Updates and On-ground Gallery -->
+        <div class="grid-2" style="margin-top: 40px;">
+            <div class="card" style="box-shadow: none; border-top: 4px solid var(--primary-color);">
+                <div class="outreach-gallery">
+                    <img src="4.jpeg" alt="Team Outreach Walking">
+                    <img src="3 - Copy.jpeg" alt="Interacting with Elders">
+                </div>
+                <h3>🤝 Village Outreach Programs | دیہی رابطہ پروگرام</h3>
+                <p>Our team regularly visits rural areas to directly understand community needs and provide on-ground support.</p>
+                <p class="urdu">ہماری ٹیم باقاعدگی سے دیہات کا دورہ کرتی ہے تاکہ عوام کے مسائل کو قریب سے سمجھ کر عملی مدد فراہم کی جا سکے۔</p>
+            </div>
+            
+            <div class="card" style="box-shadow: none; border-top: 4px solid var(--primary-color);">
+                <div class="outreach-gallery">
+                    <img src="5.jpeg" alt="Elderly Community Support">
+                    <img src="1.jpeg" alt="Community Interaction" style="object-position: top;">
+                </div>
+                <h3>👵 Elder & Community Support | بزرگوں اور کمیونٹی سپورٹ</h3>
+                <p>We actively engage with village elders to build trust, receive feedback, and ensure transparent operations.</p>
+                <p class="urdu">ہم بزرگ شہریوں سے براہِ راست رابطہ کرتے ہیں تاکہ اعتماد قائم ہو اور شفاف نظام برقرار رہے۔</p>
+            </div>
+        </div>
+
+        <!-- Large Overview Camp Collage -->
+        <div class="grid-2">
+            <div class="large-collage-box">
+                <h4 style="margin-bottom: 15px; font-weight: 600; color: var(--text-dark);">On-Ground Highlights Matrix</h4>
+                <img src="10 - Copy.jpeg" alt="Elevate Human Trust Medical and Social Activities Collage">
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Projects Section -->
+    <section>
+        <div class="section-title">
+            <h2>🎯 Future Projects | مستقبل کے منصوبے</h2>
+        </div>
+        <ul class="future-list">
+            <li><i class="fa-solid fa-truck-medical"></i> Mobile Medical Units (Mobile hospitals)</li>
+            <li><i class="fa-solid fa-children"></i> Orphan care & education centers</li>
+            <li><i class="fa-solid fa-cubes"></i> Skill development training hubs</li>
+            <li><i class="fa-solid fa-person-dress"></i> Women empowerment programs</li>
+            <li><i class="fa-solid fa-hotel"></i> Free hostel facilities for students</li>
+            <li><i class="fa-solid fa-cloud-showers-heavy"></i> Disaster emergency response unit</li>
+        </ul>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+        <div class="donation-banner">
+            <h2>💖 Support a Life Today | آج ہی کسی کی زندگی بدلیں</h2>
+            <p>Even a small donation can bring a big change in someone’s life. Your support helps us continue our mission of humanity.</p>
+            <p class="urdu" style="text-align: center; color: #e2e8f0; font-size:1.1rem;">آپ کا چھوٹا سا عطیہ کسی کی پوری زندگی بدل سکتا ہے۔ آپ کی مدد ہماری انسانیت کی خدمت کو جاری رکھتی ہے۔</p>
+            
+            <div class="easypaisa-box">
+                <span>EasyPaisa Channel (Direct secure contribution line):</span>
+                <i class="fa-solid fa-wallet"></i> +92 333 839088
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership">
+        <div class="section-title">
+            <h2>🏛️ Leadership | قیادت</h2>
+        </div>
+        <div class="grid-3">
+            <!-- Leader 1 -->
+            <div class="leader-card">
+                <div class="leader-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>Natasha Kanwal</h3>
+                <p class="role">Chairperson & Owner</p>
+                <p><a href="tel:+92333839088"><i class="fa-solid fa-phone"></i> +92 333 839088</a></p>
+            </div>
+            <!-- Leader 2 -->
+            <div class="leader-card">
+                <div class="leader-avatar"><i class="fa-solid fa-user-gear"></i></div>
+                <h3>Shoaib Arif</h3>
+                <p class="role">CEO & Owner</p>
+                <p><a href="tel:+31687859887"><i class="fa-solid fa-phone"></i> +31 68 7859887</a></p>
+            </div>
+            <!-- Leader 3 -->
+            <div class="leader-card">
+                <div class="leader-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                <h3>Khafia Afreen</h3>
+                <p class="role">Manager</p>
+                <p><a href="tel:+923254670796"><i class="fa-solid fa-phone"></i> +92 325 4670796</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Feedback Section -->
+    <section id="feedback" style="padding-top: 0;">
+        <div class="card" style="max-width: 800px; margin: 0 auto; padding: 40px;">
+            <div class="section-title" style="margin-bottom: 25px;">
+                <h2>Submit Feedback | رائے دیجیے</h2>
+            </div>
+            <form style="display: flex; flex-direction: column; gap: 15px;" onsubmit="event.preventDefault(); alert('Thank you for your feedback!');">
+                <input type="text" placeholder="Your Name" style="padding: 12px; border: 1px solid #cbd5e0; border-radius: 6px; font-family: inherit;" required>
+                <input type="email" placeholder="Email Address" style="padding: 12px; border: 1px solid #cbd5e0; border-radius: 6px; font-family: inherit;" required>
+                <textarea rows="4" placeholder="Your Comments or Suggestions..." style="padding: 12px; border: 1px solid #cbd5e0; border-radius: 6px; font-family: inherit;" required></textarea>
+                <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.3s;">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Final Message / Quote -->
+    <section style="padding-top: 0;">
+        <div class="final-msg">
+            <h2>🌍 Final Message | آخری پیغام</h2>
+            <p style="margin-top:20px; max-width:800px; margin-left:auto; margin-right:auto;">Elevate Human Trust believes that humanity is not just an idea — it is an action. Every meal shared, every patient treated, and every girl supported in marriage is a step toward a better world.</p>
+            <p class="urdu" style="text-align:center; max-width:800px; margin:20px auto 0;">Elevate Human Trust کے نزدیک انسانیت صرف ایک سوچ نہیں بلکہ ایک عمل ہے۔ ہر مدد، ہر علاج، اور ہر خوشی ایک بہتر دنیا کی طرف قدم ہے۔</p>
+            
+            <div class="quote-box">
+                “Where humanity lives, hope never dies.” | <span class="urdu">“جہاں انسانیت زندہ ہو، وہاں امید کبھی ختم نہیں ہوتی۔”</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Elevate Human Trust</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 10px;">Dedicated to building a compassionate society where no one is left behind.</p>
+                <p class="urdu" style="text-align: left; font-size: 1rem; color: var(--accent-yellow);">امید احساس انسانیت</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Access</h4>
+                <ul>
+                    <li><a href="#about">Organizational Vision</a></li>
+                    <li><a href="#services">Strategic Initiatives</a></li>
+                    <li><a href="#projects">Our Work Portfolio</a></li>
+                    <li><a href="#feedback">Submit Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Official Direct Helplines</h4>
+                <ul>
+                    <li><strong>Helpline Support:</strong> <a href="tel:+92308660788">+92 308 660788</a></li>
+                    <li><strong>Email ID:</strong> <a href="mailto:ehtrust66@gmail.com">ehtrust66@gmail.com</a></li>
+                    <li><strong>EasyPaisa Channel:</strong> +92 333 839088</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Elevate Human Trust. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
